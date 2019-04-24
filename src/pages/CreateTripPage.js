@@ -1,11 +1,18 @@
 // @flow
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   TextInput,
   Button,
   StyleSheet,
 } from 'react-native';
+import { connect } from 'react-redux';
+import { createTrip as createTripAction, type TripActionType } from '../actions/TripAction';
+
+type PropsType = {
+  createTrip: typeof createTripAction,
+  navigation: any,
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -15,15 +22,25 @@ const styles = StyleSheet.create({
   }
 });
 
-const CreateTripPage = () => {
+export const CreateTripPage = ({ createTrip, navigation }: PropsType) => {
+  const [ name, setName ] = useState('');
+
+  const onAdd = () => {
+    createTrip(name);
+    navigation.pop();
+  }
+
   return (
     <View style={styles.container}>
       <TextInput
+        testID="tripNameTextInput"
         placeholder="Trip Name"
+        onChangeText={setName}
       />
       <Button
+        testID="addButton"
         title="Add"
-        onPress={() => {}}
+        onPress={onAdd}
       />
     </View>
   );
@@ -33,4 +50,8 @@ CreateTripPage.navigationOptions = {
   title: 'New Trip',
 }
 
-export default CreateTripPage;
+const mapDispatchToProps = {
+  createTrip: createTripAction,
+}
+
+export default connect(null, mapDispatchToProps)(CreateTripPage);

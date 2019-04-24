@@ -1,6 +1,10 @@
 // @flow
 import React from 'react';
-import { View, Button, Text, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
+import EmptyTrip from '../components/EmptyTrip';
+import { type TripStateType } from '../reducers/TripReducer';
+import TripList from '../components/TripList';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,22 +16,26 @@ const styles = StyleSheet.create({
 
 type PropsType = {
   navigation: any,
+  trips: $PropertyType<TripStateType, 'trips'>,
 }
 
-const TripListPage = ({ navigation }: PropsType) => {
-  return (
-    <View style={styles.container}>
-      <Text>You do not have any trip yet.</Text>
-      <Button
-        title="Add Trip"
-        onPress={() => navigation.push('CreateTrip')}
-      />
-    </View>
-  )
+export const TripListPage = ({ navigation, trips }: PropsType) => {
+
+  if (!trips.length) {
+    return (
+      <EmptyTrip onAdd={() => navigation.push('CreateTrip')} />
+    )
+  }
+
+  return (<TripList trips={trips} />);
 };
 
 TripListPage.navigationOptions = {
   title: 'Trips',
 }
 
-export default TripListPage;
+const mapStateToProps = (state) => ({
+  trips: state.trip.trips,
+});
+
+export default connect(mapStateToProps, null)(TripListPage);

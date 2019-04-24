@@ -12,8 +12,10 @@ exports[`CreateTripPage should render form 1`] = `
 >
   <TextInput
     allowFontScaling={true}
+    onChangeText={[Function]}
     placeholder="Trip Name"
     rejectResponderTermination={true}
+    testID="tripNameTextInput"
     underlineColorAndroid="transparent"
   />
   <View
@@ -32,6 +34,7 @@ exports[`CreateTripPage should render form 1`] = `
         "opacity": 1,
       }
     }
+    testID="addButton"
   >
     <View
       style={
