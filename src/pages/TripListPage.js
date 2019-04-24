@@ -10,16 +10,24 @@ const styles = StyleSheet.create({
   },
 });
 
-const TripListPage = () => {
+type PropsType = {
+  navigation: any,
+}
+
+const TripListPage = ({ navigation }: PropsType) => {
   return (
     <View style={styles.container}>
       <Text>You do not have any trip yet.</Text>
       <Button
         title="Add Trip"
-        onPress={() => {}}
+        onPress={() => navigation.push('CreateTrip')}
       />
     </View>
   )
 };
+
+TripListPage.navigationOptions = {
+  title: 'Trips',
+}
 
 export default TripListPage;
