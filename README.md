@@ -16,3 +16,9 @@ yarn install
 ```
 react-native run-ios or react-native run-android
 ```
+
+## Tech Stacks
+1. React Native
+2. Redux
+3. Flowtype
+4. Jest
