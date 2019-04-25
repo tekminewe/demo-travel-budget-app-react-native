@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { CreateTripPage } from '../CreateTripPage';
 
 describe('CreateTripPage', () => {
-  let props = props = {
+  let props = {
     createTrip: jest.fn(),
     navigation: {
       pop: jest.fn(),
@@ -20,16 +20,16 @@ describe('CreateTripPage', () => {
     expect(page).toMatchSnapshot();
   });
 
-  test('should fire create trip action and return to previous page', () => {
+  test('should create trip and return to previous page', () => {
     const page = shallow(<CreateTripPage {...props} />);
     const textInput = page.findWhere(node => node.prop('testID') === 'tripNameTextInput');
     const addButton = page.findWhere(node => node.prop('testID') === 'addButton');
 
     textInput.simulate('changeText', 'yessss');
     page.update();
-
     addButton.simulate('press');
 
-    expect(props.createTrip).toBeCalledWith('yessss');
+    expect(props.createTrip).toBeCalled();
+    expect(props.navigation.pop).toBeCalled();
   });
 });

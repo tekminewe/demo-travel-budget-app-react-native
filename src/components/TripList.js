@@ -21,6 +21,7 @@ export const TripList = ({ trips }: PropsType) => {
     <View style={styles.container}>
       <FlatList
         data={trips}
+        keyExtractor={item => `${item.id}`}
         renderItem={({ item }) => (<TripListItem trip={item} />)}
       />
     </View>
