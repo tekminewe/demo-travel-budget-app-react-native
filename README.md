@@ -1,4 +1,4 @@
-# Travel Budget App (React Native)
+# Travel Budget App (React Native) --- In Progress
 
 A simply and ugly interface travel budget app that build with React Native.
 
