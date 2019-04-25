@@ -14,7 +14,7 @@ describe('TripReducer', () => {
           {
             id: 1,
             name: 'Trip 1',
-          }
+          },
         ],
       };
       const action = {
@@ -30,8 +30,8 @@ describe('TripReducer', () => {
           {
             id: 2,
             name: 'Trip 2',
-          }
-        ]
+          },
+        ],
       });
     });
   });

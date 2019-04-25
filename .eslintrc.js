@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: 'airbnb',
+  extends: [
+    'airbnb',
+    'plugin:flowtype/recommended',
+    'plugin:jest/recommended',
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -18,9 +22,11 @@ module.exports = {
   plugins: [
     'react',
     'react-hooks',
+    'flowtype',
   ],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn'
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }]
   },
 };

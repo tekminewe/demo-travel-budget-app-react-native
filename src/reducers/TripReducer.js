@@ -12,10 +12,10 @@ export type TripStateType = {
 
 const initialState: TripStateType = {
   trips: [],
-}
+};
 
 export default (state: TripStateType = initialState, action: TripActionType) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'CREATE_TRIP':
       return {
         trips: [
@@ -23,10 +23,10 @@ export default (state: TripStateType = initialState, action: TripActionType) => 
           {
             id: state.trips.length + 1,
             name: action.name,
-          }
+          },
         ],
-      }
+      };
     default:
       return state;
   }
-}
+};

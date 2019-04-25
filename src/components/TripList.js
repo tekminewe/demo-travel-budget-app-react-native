@@ -16,17 +16,14 @@ type PropsType = {
   trips: $PropertyType<TripStateType, 'trips'>,
 }
 
-export const TripList = ({ trips }: PropsType) => {
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={trips}
-        keyExtractor={item => `${item.id}`}
-        renderItem={({ item }) => (<TripListItem trip={item} />)}
-      />
-    </View>
-  )
-};
-
+const TripList = ({ trips }: PropsType) => (
+  <View style={styles.container}>
+    <FlatList
+      data={trips}
+      keyExtractor={item => `${item.id}`}
+      renderItem={({ item }) => (<TripListItem trip={item} />)}
+    />
+  </View>
+);
 
 export default TripList;

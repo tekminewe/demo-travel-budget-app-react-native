@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { CreateTripPage } from '../CreateTripPage';
 
 describe('CreateTripPage', () => {
-  let props = {
+  const props = {
     createTrip: jest.fn(),
     navigation: {
       pop: jest.fn(),
@@ -29,7 +29,7 @@ describe('CreateTripPage', () => {
     page.update();
     addButton.simulate('press');
 
-    expect(props.createTrip).toBeCalled();
-    expect(props.navigation.pop).toBeCalled();
+    expect(props.createTrip).toHaveBeenCalled();
+    expect(props.navigation.pop).toHaveBeenCalled();
   });
 });

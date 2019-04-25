@@ -1,12 +1,12 @@
 // @flow
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import TripListPage from '../pages/TripListPage';
-import CreateTripPage from '../pages/CreateTripPage';
+import ConnectedTripListPage from '../pages/TripListPage';
+import ConnectedCreateTripPage from '../pages/CreateTripPage';
 
 const AppNavigator = createStackNavigator(
   {
-    TripList: TripListPage,
-    CreateTrip: CreateTripPage,
+    TripList: ConnectedTripListPage,
+    CreateTrip: ConnectedCreateTripPage,
   },
 );
 

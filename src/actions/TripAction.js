@@ -3,9 +3,9 @@
 export type TripActionType =
  | { type: 'CREATE_TRIP', name: string };
 
-export const createTrip = (name: string): TripActionType => {
-  return {
-    type: 'CREATE_TRIP',
-    name,
-  }
-};
+export const createTrip = (name: string): TripActionType => ({
+  type: 'CREATE_TRIP',
+  name,
+});
+
+export default {};

@@ -9,7 +9,7 @@ describe('TripListPage', () => {
     props = {
       trips: [],
     };
-  })
+  });
 
   test('should display add button if no trips', () => {
     const page = renderer.create(<TripListPage {...props} />).toJSON();
@@ -28,8 +28,8 @@ describe('TripListPage', () => {
           id: 2,
           name: 'Trip 2',
         },
-      ]
-    }
+      ],
+    };
     const page = renderer.create(<TripListPage {...props} />).toJSON();
     expect(page).toMatchSnapshot();
   });
