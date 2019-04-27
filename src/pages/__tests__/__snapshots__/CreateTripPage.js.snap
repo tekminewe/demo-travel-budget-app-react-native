@@ -3,61 +3,177 @@
 exports[`CreateTripPage should render form 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "marginTop": 30,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "height": 1334,
+      },
+      Object {
+        "marginHorizontal": 10,
+        "marginVertical": 30,
+      },
+    ]
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onChangeText={[Function]}
-    placeholder="Trip Name"
-    rejectResponderTermination={true}
-    testID="tripNameTextInput"
-    underlineColorAndroid="transparent"
-  />
-  <View
-    accessibilityRole="button"
-    accessibilityStates={Array []}
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
+  <RCTScrollView
+    automaticallyAdjustContentInsets={false}
+    contentContainerStyle={
+      Array [
+        Object {
+          "padding": undefined,
+        },
+        undefined,
+      ]
+    }
+    contentInset={
       Object {
-        "opacity": 1,
+        "bottom": 0,
       }
     }
-    testID="addButton"
-  >
-    <View
-      style={
-        Array [
-          Object {},
-        ]
+    enableAutomaticScroll={true}
+    enableOnAndroid={false}
+    enableResetScrollToCoords={true}
+    extraHeight={75}
+    extraScrollHeight={0}
+    getScrollResponder={[Function]}
+    handleOnScroll={[Function]}
+    keyboardDismissMode="interactive"
+    keyboardOpeningTime={250}
+    keyboardShouldPersistTaps="handled"
+    keyboardSpace={0}
+    onScroll={[Function]}
+    resetKeyboardSpace={[Function]}
+    resetScrollToCoords={
+      Object {
+        "x": 0,
+        "y": 0,
       }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
-        }
+    }
+    scrollEventThrottle={1}
+    scrollForExtraHeightOnAndroid={[Function]}
+    scrollIntoView={[Function]}
+    scrollToEnd={[Function]}
+    scrollToFocusedInput={[Function]}
+    scrollToPosition={[Function]}
+    showsVerticalScrollIndicator={true}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+      }
+    }
+    update={[Function]}
+    viewIsInsideTabBar={false}
+  >
+    <View>
+      <View
+        style={Object {}}
       >
-        Add
-      </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomWidth": 1,
+              "borderColor": "#D9D5DC",
+              "borderLeftWidth": 1,
+              "borderRadius": 30,
+              "borderRightWidth": 1,
+              "borderTopWidth": 1,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "marginBottom": 10,
+              "marginLeft": 0,
+              "opacity": 1,
+            }
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            editable={true}
+            onChangeText={[Function]}
+            placeholder="Trip Name"
+            placeholderTextColor="#575757"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "fontSize": 17,
+                "height": 50,
+                "paddingLeft": 8,
+                "paddingRight": 5,
+                "top": 1.5,
+              }
+            }
+            testID="tripNameTextInput"
+            underlineColorAndroid="rgba(0,0,0,0)"
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "stretch",
+              "backgroundColor": "#007aff",
+              "borderBottomWidth": null,
+              "borderColor": "#007aff",
+              "borderLeftWidth": null,
+              "borderRadius": 57,
+              "borderRightWidth": null,
+              "borderTopWidth": null,
+              "borderWidth": undefined,
+              "elevation": 2,
+              "flexDirection": "row",
+              "height": 45,
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingBottom": 6,
+              "paddingTop": 6,
+              "shadowColor": undefined,
+              "shadowOffset": undefined,
+              "shadowOpacity": undefined,
+              "shadowRadius": undefined,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#fff",
+                "fontFamily": "System",
+                "fontSize": 16.5,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "paddingLeft": 16,
+                "paddingRight": 16,
+              }
+            }
+            uppercase={false}
+          >
+            Add
+          </Text>
+        </View>
+      </View>
     </View>
-  </View>
+  </RCTScrollView>
 </View>
 `;

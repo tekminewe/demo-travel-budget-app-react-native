@@ -8,6 +8,7 @@
     "eslint": "node_modules/.bin/eslint \"./**/*.js\""
   },
   "dependencies": {
+    "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-native": "0.59.5",
     "react-native-gesture-handler": "^1.1.0",
@@ -40,6 +41,9 @@
     "preset": "react-native",
     "setupFiles": [
       "./jest/enzyme.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-iphone-x-helper)/)"
     ]
   }
 }

@@ -8,6 +8,17 @@ const AppNavigator = createStackNavigator(
     TripList: ConnectedTripListPage,
     CreateTrip: ConnectedCreateTripPage,
   },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#9c27b0',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        color: '#fff',
+      },
+    },
+  },
 );
 
 export default createAppContainer(AppNavigator);

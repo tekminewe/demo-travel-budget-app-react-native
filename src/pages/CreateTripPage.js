@@ -1,13 +1,12 @@
 // @flow
 import React, { useState } from 'react';
-import {
-  View,
-  TextInput,
-  Button,
-  StyleSheet,
-} from 'react-native';
+import { StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
+import { Container, Content, Form } from 'native-base';
+
 import { createTrip as createTripAction } from '../actions/TripAction';
+import TextBox from '../components/common/TextBox';
+import Button from '../components/common/Button';
 
 type PropsType = {
   createTrip: typeof createTripAction,
@@ -16,9 +15,11 @@ type PropsType = {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    marginTop: 30,
+    marginVertical: 30,
+    marginHorizontal: 10,
+  },
+  formField: {
+    marginBottom: 10,
   },
 });
 
@@ -31,18 +32,23 @@ export const CreateTripPage = ({ createTrip, navigation }: PropsType) => {
   };
 
   return (
-    <View style={styles.container}>
-      <TextInput
-        testID="tripNameTextInput"
-        placeholder="Trip Name"
-        onChangeText={setName}
-      />
-      <Button
-        testID="addButton"
-        title="Add"
-        onPress={onAdd}
-      />
-    </View>
+    <Container style={styles.container}>
+      <Content>
+        <Form>
+          <TextBox
+            testID="tripNameTextInput"
+            placeholder="Trip Name"
+            onChangeText={setName}
+            style={styles.formField}
+          />
+          <Button
+            testID="addButton"
+            title="Add"
+            onPress={onAdd}
+          />
+        </Form>
+      </Content>
+    </Container>
   );
 };
 
