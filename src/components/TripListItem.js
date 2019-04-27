@@ -1,25 +1,18 @@
 // @flow
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Card, CardItem, Text } from 'native-base';
 import { type TripType } from '../reducers/TripReducer';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 type PropsType = {
   trip: TripType,
 }
 
 const TripListItem = ({ trip }: PropsType) => (
-  <View style={styles.container}>
-    <Text>{`Id: ${trip.id}`}</Text>
-    <Text>{`Name: ${trip.name}`}</Text>
-  </View>
+  <Card>
+    <CardItem header>
+      <Text>{`Trip: ${trip.name}`}</Text>
+    </CardItem>
+  </Card>
 );
 
 export default TripListItem;
