@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import EmptyTrip from '../components/EmptyTrip';
 import { type TripStateType } from '../reducers/TripReducer';
 import TripList from '../components/TripList';
+import HeaderButton from '../components/common/HeaderButton';
 
 type PropsType = {
   navigation: any,
@@ -20,9 +21,15 @@ export const TripListPage = ({ navigation, trips }: PropsType) => {
   return (<TripList trips={trips} />);
 };
 
-TripListPage.navigationOptions = {
+TripListPage.navigationOptions = ({ navigation }) => ({
   title: 'Trips',
-};
+  headerRight: (
+    <HeaderButton
+      title="Add"
+      onPress={() => navigation.push('CreateTrip')}
+    />
+  ),
+});
 
 const mapStateToProps = state => ({
   trips: state.trip.trips,
