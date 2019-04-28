@@ -1,32 +1,5 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-  },
   extends: [
-    'airbnb',
-    'plugin:flowtype/recommended',
-    'plugin:jest/recommended',
+    'eslint-config-react-native-standard',
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  plugins: [
-    'react',
-    'react-hooks',
-    'flowtype',
-  ],
-  rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }]
-  },
 };

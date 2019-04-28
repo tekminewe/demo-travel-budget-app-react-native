@@ -15,8 +15,8 @@ type PropsType = {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 30,
     marginHorizontal: 10,
+    marginVertical: 30,
   },
   formField: {
     marginBottom: 10,
