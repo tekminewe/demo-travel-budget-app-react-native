@@ -57,95 +57,167 @@ exports[`TripListPage should display add button if no trips 1`] = `
 `;
 
 exports[`TripListPage should trips list if have trips 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "id": 1,
+        "name": "Trip 1",
+      },
+      Object {
+        "id": 2,
+        "name": "Trip 2",
+      },
+    ]
   }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
 >
-  <RCTScrollView
-    data={
-      Array [
-        Object {
-          "id": 1,
-          "name": "Trip 1",
-        },
-        Object {
-          "id": 2,
-          "name": "Trip 2",
-        },
-      ]
-    }
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    numColumns={1}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    removeClippedSubviews={false}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
-  >
-    <View>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
       <View
-        onLayout={[Function]}
-        style={null}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 0.5,
+            "borderColor": "#ccc",
+            "borderLeftWidth": 0.5,
+            "borderRadius": 2,
+            "borderRightWidth": 0.5,
+            "borderTopWidth": 0.5,
+            "elevation": 3,
+            "flexWrap": "nowrap",
+            "marginBottom": 5,
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 5,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 1.5,
+          }
+        }
       >
         <View
+          header={true}
           style={
             Object {
               "alignItems": "center",
-              "flex": 1,
-              "justifyContent": "center",
+              "backgroundColor": "#fff",
+              "borderBottomWidth": null,
+              "borderRadius": 2,
+              "flexDirection": "row",
+              "paddingBottom": 15,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 15,
             }
           }
         >
-          <Text>
-            Id: 1
-          </Text>
-          <Text>
-            Name: Trip 1
-          </Text>
-        </View>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flex": 1,
-              "justifyContent": "center",
+          <Text
+            style={
+              Object {
+                "color": "#000",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
             }
-          }
-        >
-          <Text>
-            Id: 2
-          </Text>
-          <Text>
-            Name: Trip 2
+            uppercase={false}
+          >
+            Trip: Trip 1
           </Text>
         </View>
       </View>
     </View>
-  </RCTScrollView>
-</View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 0.5,
+            "borderColor": "#ccc",
+            "borderLeftWidth": 0.5,
+            "borderRadius": 2,
+            "borderRightWidth": 0.5,
+            "borderTopWidth": 0.5,
+            "elevation": 3,
+            "flexWrap": "nowrap",
+            "marginBottom": 5,
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 5,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 1.5,
+          }
+        }
+      >
+        <View
+          header={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderBottomWidth": null,
+              "borderRadius": 2,
+              "flexDirection": "row",
+              "paddingBottom": 15,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 15,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#000",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+            uppercase={false}
+          >
+            Trip: Trip 2
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
 `;
