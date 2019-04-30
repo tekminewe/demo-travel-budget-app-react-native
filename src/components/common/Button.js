@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, { memo } from 'react';
 import { Button as NBButton, Text } from 'native-base';
 
 type PropsType = {
@@ -23,4 +23,4 @@ Button.defaultProps = {
   onPress: () => {},
 };
 
-export default Button;
+export default memo<PropsType>(Button);

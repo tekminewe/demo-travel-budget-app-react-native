@@ -1,6 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import renderer, { act } from 'react-test-renderer';
 import { CreateTripPage } from '../CreateTripPage';
 
 describe('CreateTripPage', () => {
@@ -21,15 +20,17 @@ describe('CreateTripPage', () => {
   });
 
   test('should create trip and return to previous page', () => {
-    const page = shallow(<CreateTripPage {...props} />);
-    const textInput = page.findWhere(node => node.prop('testID') === 'tripNameTextInput');
-    const addButton = page.findWhere(node => node.prop('testID') === 'addButton');
+    const page = renderer.create(<CreateTripPage {...props} />);
+    const textInput = page.root.findByProps({ testID: 'tripNameTextInput' });
+    const addButton = page.root.findByProps({ testID: 'addButton' });
 
-    textInput.simulate('changeText', 'yessss');
-    page.update();
-    addButton.simulate('press');
+    act(() => {
+      textInput.props.onChangeText('yessss');
+    });
 
-    expect(props.createTrip).toHaveBeenCalled();
+    addButton.props.onPress();
+
+    expect(props.createTrip).toHaveBeenCalledWith('yessss');
     expect(props.navigation.pop).toHaveBeenCalled();
   });
 });

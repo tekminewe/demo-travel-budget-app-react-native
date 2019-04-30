@@ -1,5 +1,10 @@
 // @flow
-import React, { useState } from 'react';
+import React, {
+  useState,
+  useCallback,
+  useRef,
+  useEffect,
+} from 'react';
 import { StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Content, Form } from 'native-base';
@@ -25,11 +30,16 @@ const styles = StyleSheet.create({
 
 export const CreateTripPage = ({ createTrip, navigation }: PropsType) => {
   const [name, setName] = useState('');
+  const nameRef = useRef('');
 
-  const onAdd = () => {
-    createTrip(name);
+  useEffect(() => {
+    nameRef.current = name;
+  });
+
+  const onAdd = useCallback(() => {
+    createTrip(nameRef.current || '');
     navigation.pop();
-  };
+  }, [createTrip, navigation, nameRef]);
 
   return (
     <Container style={styles.container}>

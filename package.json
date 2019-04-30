@@ -21,8 +21,6 @@
     "@babel/runtime": "^7.4.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-native-standard": "^0.1.1",
@@ -36,14 +34,11 @@
     "flow-bin": "^0.92.0",
     "jest": "^24.7.1",
     "metro-react-native-babel-preset": "^0.53.1",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.8.3",
     "react-test-renderer": "16.8.3"
   },
   "jest": {
     "preset": "react-native",
-    "setupFiles": [
-      "./jest/enzyme.js"
-    ],
     "transformIgnorePatterns": [
       "node_modules/(?!(react-native|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-iphone-x-helper)/)"
     ]
